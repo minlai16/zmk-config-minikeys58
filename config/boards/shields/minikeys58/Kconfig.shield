@@ -1,2 +1,2 @@
 config SHIELD_MINIKEYS58
-    def_bool $(shields_lists_contains, minikeys58)
+    def_bool $(shields_list_contains, minikeys58)
