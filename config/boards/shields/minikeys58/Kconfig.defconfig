@@ -1,0 +1,5 @@
+if SHIELD_MINIKEYS58
+
+config ZMK_KEYBOARD_NAME
+    default "minikeys58"
+endif

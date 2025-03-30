@@ -1,0 +1,59 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+ / {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp ESC   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp MINUS   &kp BSPACE,
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P  &kp EQUAL &mo 1,
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp SCLN  &kp QUOT &kp ENTER,
+                &kp LSHIFT &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMM &kp DOT  &kp SLSH  &kp RSHIFT,
+                &mo 2      &kp LCTL &kp LGUI                   &kp SPACE                            &kp RGUI  &mo 3    &tog 4
+            >;
+        };
+        
+        bt_layer {
+            bindings = <
+                &kp ESC   &BT_SEL 0   &BT_SEL 1   &BT_SEL 2   &BT_CLR   &kp 5   &kp 6   &kp 7   &kp 8   &kp 9   &kp 0   &kp MINUS   &kp BSPACE,
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P  &kp EQUAL &mo 1,
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp SCLN  &kp QUOT &kp ENTER,
+                &kp LSHIFT &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMM &kp DOT  &kp SLSH  &kp RSHIFT,
+                &mo 2      &kp LCTL &kp LGUI                   &kp SPACE                            &kp RGUI  &mo 3    &none
+            >;
+        };
+        
+        fn_layer {
+            bindings = <
+                &kp GRAVE   &F1   &F2   &F3   &F4   &F5   &F6   &F7   &F8   &F9   &F10   &F11   &F12,
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P  &kp EQUAL &mo 1,
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp SCLN  &kp QUOT &kp ENTER,
+                &kp LSHIFT &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMM &kp DOT  &kp SLSH  &kp RSHIFT,
+                &mo 2      &kp LCTL &kp LGUI                   &kp SPACE                            &kp RGUI  &mo 3    &none
+            >;
+        };
+        
+        control_layer {
+            bindings = <
+                &bri_down   &bri_up   &mission_control   &dnd_toggle   &spotlight   &launchpad   &mute   &vold   &volu   &prev_track   &play_pause   &next_track   &kp BSPACE,
+                &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P  &kp EQUAL &mo 1,
+                &kp CAPS  &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp SCLN  &kp QUOT &kp ENTER,
+                &kp LSHIFT &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMM &kp DOT  &kp SLSH  &kp RSHIFT,
+                &mo 2      &kp LCTL &kp LGUI                   &kp SPACE                            &kp RGUI  &mo 3    &none
+            >;
+        };
+
+        arrow_layer {
+            bindings = <
+                &bri_down   &bri_up   &mission_control   &dnd_toggle   &spotlight   &launchpad   &mute   &vold   &volu   &prev_track   &play_pause   &next_track   &kp BSPACE,
+                &kp TAB   &kp Q    &kp UP    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P  &kp EQUAL &mo 1,
+                &kp CAPS  &kp LEFT    &kp DOWN    &kp RIGHT    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp SCLN  &kp QUOT &kp ENTER,
+                &kp LSHIFT &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMM &kp DOT  &kp SLSH  &kp RSHIFT,
+                &mo 2      &kp LCTL &kp LGUI                   &kp SPACE                            &kp RGUI  &mo 3    &tog 4
+            >;
+        };
+    };
+};
